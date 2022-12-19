@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+
+.badge {
+  @apply bg-white text-xs font-bold p-2 rounded-full absolute top-0 ml-2 mt-2;
+}
+
+/* hamburget menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  /* transform: rotate(0); */
+  transition: all 0.3s;
+}
+
+.hamburger-mid {
+  transform: translateY(7px);
+}
+
+.hamburger-bot {
+  transform: translateY(14px);
+}
+
+/* .open {
+  transform: rotate(180deg);
+  transform: translateY(0px);
+} */
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-mid {
+  left: 100%;
+  opacity: 0;
+}
+
+.open .hamburger-bot {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
